@@ -4,28 +4,24 @@ import { navLinks } from "../../constants";
 
 const Navbar = () => {
   useGSAP(() => {
-    const navTween = gsap.timeline({
+    gsap.to("nav", {
+      backdropFilter: "blur(3px)",
+      backgroundColor: "rgba(0,0,0,0.3)",
+      duration: 0.3,
+      ease: "power1.inOut",
       scrollTrigger: {
-        trigger: "nav",
-        start: "bottom top",
+        trigger: "body",
+        start: "top+=10 top",
+        end: "top top",
+        scrub: true,
       },
     });
-    navTween.fromTo(
-      "nav",
-      { backgroundColor: "transparent" },
-      {
-        backgroundColor: "#00000050",
-        backgroundFilter: "blur(10px)",
-        duration: 1,
-        ease: "power1.inOut",
-      }
-    );
   });
 
   return (
     <nav>
       <div>
-        <a href="#home" className="flex items-center gap-2">
+        <a href="#hero" className="flex items-center gap-2">
           <img src="/images/logo.png" alt="logo" />
           <p>Velvet Pour</p>
         </a>

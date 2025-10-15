@@ -57,6 +57,11 @@ body {
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: 50%;
+
+    -webkit-mask-image: url("/images/mask-img.png");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: 50%;
 }
 
 @layer components {
@@ -81,6 +86,10 @@ body {
 
         ul {
             @apply flex-center lg:gap-12 gap-7;
+
+            li{
+                @apply hover:text-yellow
+            }
         }
     }
 
@@ -92,7 +101,7 @@ body {
         @apply relative z-10 min-h-dvh w-full border border-transparent;
 
         h1 {
-            @apply md:mt-32 mt-40 text-8xl md:text-[20vw] leading-none text-center font-modern-negra opacity-80;
+            @apply md:mt-32 mt-40 text-8xl md:text-[18vw] leading-none text-center font-modern-negra opacity-90;
         }
 
         .left-leaf {
