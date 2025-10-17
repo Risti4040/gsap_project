@@ -44,4 +44,4 @@ npm install
 # Start development server
 npm run dev
 ```
-[![Preview](/images/site-preview.png)](https://gsap-project-cocktails.vercel.app/)
+[![Preview](https://github.com/Risti4040/gsap_project/blob/main/public/images/site-preview.png?raw=true)](https://gsap-project-cocktails.vercel.app/)
