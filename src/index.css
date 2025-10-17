@@ -41,7 +41,7 @@ html {
 }
 
 @utility text-gradient {
-    background: linear-gradient(to bottom, #ffffff, #898989);
+    background: linear-gradient(to bottom, #ffffff, rgba(77, 77, 77, 0.25));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -114,6 +114,9 @@ html {
 
         .right-leaf {
             @apply absolute right-0 md:bottom-0 xl:top-0 2xl:top-12 top-1/2 md:w-fit w-24;
+        }
+        .arrow {
+            @apply absolute hidden lg:block right-20 -z-10
         }
 
         .body {
@@ -214,8 +217,12 @@ html {
                     @apply text-lg;
                 }
 
-                div {
-                    @apply flex flex-col justify-between md:gap-2 gap-5;
+                .reviews {
+                    @apply flex justify-between items-center md:gap-2 gap-5;
+
+                    #stars {
+                        @apply scale-120 ml-2
+                    }
 
                     span {
                         @apply text-yellow font-bold text-5xl;
@@ -257,7 +264,7 @@ html {
         @apply flex-center flex-col min-h-dvh p-5 mt-20 relative radial-gradient;
 
         h2 {
-            @apply relative md:text-[20vw] text-8xl text-nowrap leading-none font-modern-negra text-center text-[#505050] mb-8;
+            @apply relative md:text-[20vw] text-8xl text-nowrap leading-none font-modern-negra text-center text-[#505050]/75 mb-8 bg-cover bg-[url('/images/noise.png')] bg-center bg-clip-text;
         }
 
         .content {

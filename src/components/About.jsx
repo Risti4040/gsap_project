@@ -16,20 +16,23 @@ const About = () => {
     });
 
     scrollTimeline
-    .from(titleSplit.words, {
-      opacity: 0,
-      duration: 1,
-      yPercent:100,
-      ease:'expo.out',
-      stagger:0.02
-    })
-    .from('.top-grid div, .bottom-grid div' , {
-        opacity:0,
-        duration:1,
-        ease:'power1.inOut',
-        stagger:0.04
-    }, '-=0.5')
-
+      .from(titleSplit.words, {
+        opacity: 0,
+        duration: 1,
+        yPercent: 100,
+        ease: "expo.out",
+        stagger: 0.02,
+      })
+      .from(
+        ".top-grid div, .bottom-grid div",
+        {
+          opacity: 0,
+          duration: 1,
+          ease: "power1.inOut",
+          stagger: 0.04,
+        },
+        "<+=0.5"
+      );
   });
   return (
     <div id="about">
@@ -45,13 +48,19 @@ const About = () => {
               detail — from the first muddle to the final garnish. That care is
               what turns a simple drink into something truly memorable.
             </p>
-            <div>
-              <p className="md:text-3xl text-xl font-bold">
-                <span>4.5</span>/5
-              </p>
-              <p className="text-sm text-white-100">
-                More than +12000 customers
-              </p>
+
+            <div className="reviews">
+              <div>
+                <img src="/images/stars.png" alt="stars" id="stars" />
+                <p className="md:text-3xl text-xl font-bold">
+                  <span>4.5</span>/5
+                </p>
+                <p className="text-sm text-white-100">
+                  More than +12000 customers
+                </p>
+              </div>
+              <img src="/images/line.png" alt="line" />
+              <img src="/images/profiles.png" alt="profiles" />
             </div>
           </div>
         </div>

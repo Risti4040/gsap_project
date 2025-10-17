@@ -33,10 +33,15 @@ Clone the repository and install dependencies:
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/landing-page-clone.git
+git clone https://github.com/Risti4040/gsap_project.git
+
+# Go to project folder
+cd gsap_project
 
 # Install dependencies
 npm install
 
 # Start development server
 npm run dev
+```
+[![Preview](/images/site-preview.png)](https://gsap-project-cocktails.vercel.app/)

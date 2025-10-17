@@ -1,48 +1,60 @@
 import { useGSAP } from "@gsap/react";
-import { openingHours, socials } from "../../constants";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
+import { openingHours, socials } from "../../constants";
 
 const Contact = () => {
-    useGSAP(() => {
-        const titleSplit = new SplitText('#contact h2', {type: 'words'})
+  useGSAP(() => {
+    const titleSplit = new SplitText("#contact h2", { type: "words" });
 
-        const timeline = gsap.timeline({
-            scrollTrigger:{
-                trigger:'#contact',
-                start: 'top center', 
-            }
-        })
-        timeline
-        .from(titleSplit.words , {
-            opacity:0 ,
-            yPercent: 100, 
-            stagger: 0.04,
-            duration:1,
-            ease: 'expo.out'
-        })
-        .from('#contact h3 , #contact p', {
-            opacity: 0,
-            yPercent: -100,
-            stagger: 0.02
-        }, '-=0.5')
-        .from('#f-left-leaf', {
-            y: 50,
-            duration: 1,
-            ease: 'power1.inOut'
-        })
-        .from('#f-right-leaf', {
-            y: -50,
-            duration: 1,
-            ease: 'power1.inOut'
-        }, '<')
-        .from('#f-drinks', {
-            y: 25,
-            x: 25,
-            duration: 1,
-            ease: 'power1.inOut'
-        },'<+=0.25' )
-    })
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#contact",
+        start: "top center",
+      },
+    });
+    timeline
+      .from(titleSplit.words, {
+        opacity: 0,
+        yPercent: 100,
+        stagger: 0.04,
+        duration: 1,
+        ease: "expo.out",
+      })
+      .from(
+        "#contact h3 , #contact p",
+        {
+          opacity: 0,
+          yPercent: 100,
+          stagger: 0.02,
+        },
+        "-=0.5"
+      )
+      .from("#f-left-leaf", {
+        y: 50,
+        duration: 1,
+        ease: "power1.inOut",
+      })
+      .from(
+        "#f-right-leaf",
+        {
+          y: -50,
+          duration: 1,
+          ease: "power1.inOut",
+        },
+        "<"
+      )
+      .from(
+        "#f-drinks",
+        {
+          y: 25,
+          x: 25,
+          duration: 1,
+          ease: "power1.inOut",
+        },
+        "<+=0.25"
+      );
+  });
   return (
     <footer id="contact">
       <img
