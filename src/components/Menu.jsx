@@ -9,6 +9,9 @@ const Menu = () => {
   const contentRef = useRef();
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const leftRef = useRef(null);
+  const rightRef = useRef(null);
+
   useGSAP(() => {
     gsap.fromTo("#title", { opacity: 0 }, { opacity: 1, duration: 1 });
     gsap.fromTo(
@@ -37,9 +40,22 @@ const Menu = () => {
         yPercent: 0,
         opacity: 100,
         ease: "power1.inOut",
-      }
+      },
+      "<+=0.02"
     );
-  },[currentIndex]);
+
+    gsap.from(leftRef.current, {
+      y: 50,
+      x: -10,
+      duration: 1,
+      ease: "power1.inOut",
+    });
+    gsap.from(
+      rightRef.current,
+      { y: -50, x: 10, duration: 1, ease: "power1.inOut" },
+      "<"
+    );
+  }, [currentIndex]);
 
   const totalCocktails = allCocktails.length;
 
@@ -64,11 +80,13 @@ const Menu = () => {
         src="/images/slider-left-leaf.png"
         alt="left-leaf"
         id="m-left-leaf"
+        ref={leftRef}
       />
       <img
         src="/images/slider-right-leaf.png"
         alt="right-leaf"
         id="m-right-leaf"
+        ref={rightRef}
       />
       <h2 id="menu-heading" className="sr-only">
         Cocktail Menu

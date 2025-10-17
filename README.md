@@ -1,12 +1,42 @@
-# React + Vite
+# 🚀 Landing Page Clone (React + Tailwind + GSAP)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **stylized and animation heavy** one-page landing page built using **React**, **Tailwind CSS** and **GSAP**.  
+This project was created **for learning and practice purposes**. It's a slightly modified **clone** of an existing website to explore modern frontend design and component structure.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📖 About the Project
 
-## Expanding the ESLint configuration
+This project helped me practice:
+- Building responsive layouts with **Tailwind CSS**
+- Implementing cool and purposeful animations with **GSAP**
+- Structuring a React component-based UI
+- Handling assets, animations, and reusability
+- Understanding real-world landing page design patterns
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+> ⚠️ This site is **not for commercial use**. It’s a personal learning project inspired by another website.
+
+---
+
+## 🛠️ Built With
+
+- ⚛️ [React](https://react.dev/)
+- 🎨 [Tailwind CSS](https://tailwindcss.com/)
+- 🎬 [GSAP](https://gsap.com/)
+- 🧩 [Vite](https://vitejs.dev/)
+
+---
+
+## ⚙️ Installation & Setup
+
+Clone the repository and install dependencies:
+
+```bash
+# Clone the repo
+git clone https://github.com/your-username/landing-page-clone.git
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
